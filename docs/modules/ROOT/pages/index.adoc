@@ -3,9 +3,13 @@
 
 include::./includes/attributes.adoc[]
 
-Natural language java.util.Date and human time parsing library for Java.
+_Natural language java.util.Date and human time parsing library for Java_
 
-See https://www.ocpsoft.org/prettytime/nlp/
+PrettyTime :: NLP is an OpenSource, Java Library – enabling simple parsing and computer understanding of natural language, and social date references like, “let’s go to dinner at 6,” or “I’ll be on vacation for three days”.
+
+This extension allows you to use this library in Quarkus native applications.
+
+You can find more about it at https://www.ocpsoft.org/prettytime/nlp/
 
 == Installation
 
@@ -23,7 +27,7 @@ In your `pom.xml` file, add:
 
 == Features
 
-=== Inject PrettyTimeParser Singleton
+=== Inject `PrettyTimeParser` Singleton
 
 A singleton `org.ocpsoft.prettytime.PrettyTimeParser` can be injected anywhere. 
 

@@ -2,14 +2,15 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-_Social Style Date and Time Formatting for Java_
+_Natural language java.util.Date and human time parsing library for Java._
 
 [![Version](https://img.shields.io/maven-central/v/io.quarkiverse.prettytime/?logo=apache-maven&style=for-the-badge)](https://search.maven.org/artifact/io.quarkiverse.prettytime/quarkus-prettytime-nlp)
 
-PrettyTime is an OpenSource time formatting library. Completely customizable, it creates human readable, relative timestamps. 
+PrettyTime :: NLP is an OpenSource, Java Library – enabling simple parsing and computer understanding of natural language, and social date references like, “let’s go to dinner at 6,” or “I’ll be on vacation for three days”.
+
 This extension allows you to use this library in Quarkus native applications.
 
-You can find more about it at https://www.ocpsoft.org/prettytime/.
+You can find more about it at https://www.ocpsoft.org/prettytime/nlp/.
 
 To get started, add the dependency:
 
@@ -17,34 +18,19 @@ To get started, add the dependency:
 <dependency>
     <groupId>io.quarkiverse.prettytime</groupId>
     <artifactId>quarkus-prettytime-nlp</artifactId>
-    <version>LATEST</version>
+    <version>{quarkus-prettytime-nlp-version}</version>
 </dependency>
 ```
 
 ## Features
 
-### Inject PrettyTime Singleton
+### Inject `PrettyTimeParser` Singleton
 
-A singleton `org.ocpsoft.prettytime.PrettyTime` can be injected anywhere. 
+A singleton `org.ocpsoft.prettytime.PrettyTimeParser` can be injected anywhere. 
 
 ```java
-// Inject PrettyTime using the default locale
-@Inject PrettyTime prettyTime;
-```
-
-**Important**: Be aware that any changes to the injected `PrettyTime` object (as in calling `setLocale` or `setReference`) will reflect on the singleton and its usage in your entire application. In cases where you need to format to a specific locale we recommend you to create a new `PrettyTime` object instead.
-
-The singleton may be referenced by the name `prettyTime` when used in a non-typesafe environment such as templates. For example, if used together with the [Qute](https://quarkus.io/guides/qute-reference) templating engine:
-
-```html
-<table>
-  {#for label in labels}
-  <tr>
-    <td>{label.name}</td>
-    <td>Created {inject:prettyTime.format(label.created)}</td>
-  </tr>
-  {/for}
-</table>
+// Inject PrettyTimeParser
+@Inject PrettyTimeParser prettyTimeParser;
 ```
 
 ### Native Support
