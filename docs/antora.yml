@@ -1,0 +1,5 @@
+name: quarkus-prettytime-nlp
+title: Quarkus Prettytime NLP
+version: dev
+nav:
+  - modules/ROOT/nav.adoc

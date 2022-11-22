@@ -1,0 +1,37 @@
+= Quarkus - Prettytime
+:extension-status: preview
+
+include::./includes/attributes.adoc[]
+
+Natural language java.util.Date and human time parsing library for Java.
+
+See https://www.ocpsoft.org/prettytime/nlp/
+
+== Installation
+
+If you want to use this extension, you need to add the `io.quarkiverse.prettytime:quarkus-prettytime-nlp` extension first.
+In your `pom.xml` file, add:
+
+[source,xml,subs=attributes+]
+----
+<dependency>
+    <groupId>io.quarkiverse.prettytime</groupId>
+    <artifactId>quarkus-prettytime-nlp</artifactId>
+    <version>{quarkus-prettytime-nlp-version}</version>
+</dependency>
+----
+
+== Features
+
+=== Inject PrettyTimeParser Singleton
+
+A singleton `org.ocpsoft.prettytime.PrettyTimeParser` can be injected anywhere. 
+
+```java
+// Inject PrettyTimeParser
+@Inject PrettyTimeParser prettyTimeParser;
+```
+
+=== Native Support
+
+This extension is fully supported in native mode.
