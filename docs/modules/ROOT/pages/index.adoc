@@ -1,4 +1,4 @@
-= Quarkus - Prettytime
+= Quarkus - Pretty Time NLP
 :extension-status: preview
 
 include::./includes/attributes.adoc[]
